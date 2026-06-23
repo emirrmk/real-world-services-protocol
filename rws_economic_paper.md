@@ -41,14 +41,14 @@ A pool is initialized for the tuple `(Service S, TimeSlot T)`.
 
 ```mermaid
 graph TD
-    subgraph Synthetic AMM Pool: Service S, Slot T
+    subgraph "Synthetic AMM Pool: Service S, Slot T"
         direction TB
-        P1[Provider 1: Tick Range 100-110]
-        P2[Provider 2: Tick Range 120-130]
-        P3[Provider 3: Tick Range 150-160]
+        P1["Provider 1: Tick Range 100-110"]
+        P2["Provider 2: Tick Range 120-130"]
+        P3["Provider 3: Tick Range 150-160"]
     end
     
-    Swap[Consumer Swap: Deposits Synthetic Obligations] -->|1. Fills lowest active ticks| P1
+    Swap["Consumer Swap: Deposits Synthetic Obligations"] -->|1. Fills lowest active ticks| P1
     Swap -->|2. Moves price up if demand increases| P2
 ```
 
